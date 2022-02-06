@@ -1,42 +1,48 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import {Link} from 'gatsby';
+import MainMenu from './mainMenu';
+import styled from 'styled-components';
+import BurgerBar from './burger-bar';
+import ContentContainer from './contentContainer';
+import logo from '../images/logo_1.png';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+const StyledHeader = styled.header`
+  padding: 1.5rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: white;
+  box-shadow: 0px 4px 9px -6px rgba(0,0,0,0.2);
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+`
+
+const LogoContainer = styled(Link)`
+  max-width: 7rem;
+  
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+`
+
+const MainHeader = () => (
+  <StyledHeader>
+    <ContentContainer>
+      <LogoContainer to={'/'}>
+        <img src={logo} />   
+      </LogoContainer> 
+      <BurgerBar />
+    </ContentContainer>
+  </StyledHeader>
 )
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default MainHeader

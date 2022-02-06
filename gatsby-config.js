@@ -1,3 +1,8 @@
+require('dotenv').config({
+  path: '.env',
+})
+
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby WordPress Starter`,
@@ -14,6 +19,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -24,17 +30,17 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     {
       resolve: "gatsby-source-wordpress",
       options: {
         minimizeDeprecationNotice: true,
-        baseUrl: "gatsby-wordpress-course.local",
-        protocol: "http",
+        baseUrl: process.env.API_URL,
+        protocol: process.env.API_PROTOCOL,
         hostingWPCOM: false,
-        useACF: false,
+        useACF: true,
+        acfOptionPageIds: [],
         verboseOutput: false,
         perPage: 100,
         concurrentRequests: 10,
@@ -46,8 +52,21 @@ module.exports = {
           "**/tags",
           "**/taxonomies",
           "**/users",
+          "**/menus",
+          "**/*/gallery",
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Taviraj`,
+          `Open Sans\:300,400,400i,500,700` // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
+    },
+    `gatsby-plugin-netlify`
   ],
 }
