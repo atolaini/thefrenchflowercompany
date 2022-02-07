@@ -40,6 +40,7 @@ module.exports = {
         protocol: process.env.API_PROTOCOL,
         hostingWPCOM: false,
         useACF: true,
+        restApiRoutePrefix: "index.php/wp-json",
         acfOptionPageIds: [],
         verboseOutput: false,
         perPage: 100,
