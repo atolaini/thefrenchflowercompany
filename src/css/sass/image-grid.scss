@@ -6,7 +6,7 @@
          figure {
             position: relative;
             box-shadow: -1px 2px 17px 0px rgba(0,0,0,0.25);
-            max-height: 30rem;
+            max-height: 25rem;
             overflow: hidden;
 
             &:nth-of-type(even) {
@@ -39,7 +39,7 @@
 
                 figcaption {
                     color: white;
-                    font-size: 3rem;
+                    font-size: 2.5rem;
                     font-family:'Taviraj';
                     position: absolute;
                     top: 2rem;
@@ -58,8 +58,8 @@
     
         .uagb-section__inner-wrap{
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2,1fr);
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
             grid-gap: 4rem;
         }
     }

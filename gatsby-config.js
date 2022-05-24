@@ -30,6 +30,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
+        icon: `src/images/logo_1.png`
       },
     },
     {
@@ -54,6 +55,8 @@ module.exports = {
           "**/users",
           "**/menus",
           "**/*/gallery",
+          "**/v2/menus",
+          "**/v2/block-patterns"
         ],
       },
     },
