@@ -56,8 +56,7 @@ module.exports = {
           "**/users",
           "**/menus",
           "**/*/gallery",
-          "**/v2/menus",
-          "**/v2/block-patterns"
+          "**/block-patterns"
         ],
       },
     },
