@@ -7,7 +7,7 @@ import ContentContainer from './contentContainer';
 import logo from '../images/logo_1.png';
 
 const StyledHeader = styled.header`
-  padding: 1.5rem 0;
+  padding: 0;
   position: fixed;
   top: 0;
   left: 0;
