@@ -55,3 +55,27 @@
           pointer-events: none;
       }
   }
+
+  .page-gallery-container {
+      display: flex;
+      flex-direction: column;
+
+      .wp-block-image {
+          width: 100%;
+          max-width: 30rem;
+      }
+  }
+
+  @media(min-width: 991px) {
+      .page-gallery-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 2rem;
+
+        .wp-block-image {
+            width: 100%;
+            max-width: unset;
+        }
+      }
+  }
