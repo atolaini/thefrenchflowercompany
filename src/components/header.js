@@ -16,6 +16,16 @@ const StyledHeader = styled.header`
   background: white;
   box-shadow: 0px 4px 9px -6px rgba(0,0,0,0.2);
 
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: #a88855;
+    width: 100%;
+  }
+
   > div {
     display: flex;
     justify-content: space-between;
