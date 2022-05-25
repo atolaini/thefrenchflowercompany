@@ -24,9 +24,6 @@ const StyledHero = styled.div`
         z-index: 1;
     }
     
-    @media ${device.md} {
-        height: 500px;
-    }
 
     img {
         height: 100%;
