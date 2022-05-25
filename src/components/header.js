@@ -37,7 +37,7 @@ const MainHeader = () => (
   <StyledHeader>
     <ContentContainer>
       <LogoContainer to={'/'}>
-        <img src={logo} />   
+        <img src={logo} width='70' height='70'/>   
       </LogoContainer> 
       <BurgerBar />
     </ContentContainer>

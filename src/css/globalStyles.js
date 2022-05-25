@@ -116,11 +116,12 @@ const GlobalStyle = createGlobalStyle`
 		box-shadow: 0px 4px 9px -6px rgba(0,0,0,0.4);
 		margin-top: 5rem;
 		margin-bottom: 5rem;
+		height: auto;
 
 
 		label {
 			font-family:'Taviraj';
-			font-size: 2rem;
+			font-size: 1.8rem;
 		}
 
 		input, textarea {
@@ -139,6 +140,10 @@ const GlobalStyle = createGlobalStyle`
 
 		.has-text-align-center {
 			text-align: center;
+		}
+
+		textarea {
+			height: 10rem
 		}
 
 	}
@@ -195,6 +200,8 @@ const GlobalStyle = createGlobalStyle`
 
 	@media ${device.lg} {
 		form {
+			margin-top: 0 !important;
+
 			br {
 				display: none;
 			}
