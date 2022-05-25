@@ -63,6 +63,13 @@
       .wp-block-image {
           width: 100%;
           max-width: 30rem;
+          max-height: 30rem;
+
+          img {
+              height: 100%;
+              width: 100%;
+              max-width: 100%;
+          }
       }
   }
 
