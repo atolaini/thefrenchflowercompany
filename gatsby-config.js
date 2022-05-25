@@ -39,8 +39,8 @@ module.exports = {
       resolve: "gatsby-source-wordpress",
       options: {
         minimizeDeprecationNotice: true,
-        baseUrl: process.env.API_URL,
-        protocol: process.env.API_PROTOCOL,
+        baseUrl: 'wordpress.thefrenchflowercompany.com',
+        protocol: 'http',
         hostingWPCOM: false,
         useACF: true,
         restApiRoutePrefix: "index.php/wp-json",
